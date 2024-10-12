@@ -1,0 +1,188 @@
+/* landingPage.css */
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+.search-filter {
+  display: flex;
+  align-items: center;
+}
+
+#searchBox {
+  padding: 8px;
+  width: 250px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+#filterButton {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#filterButton:hover {
+  background-color: #45a049;
+}
+
+/* Filter Modal Styling */
+#filterModal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+  border-radius: 8px;
+  animation:fadeIn 0.5s ease-in-out;
+}
+.show{
+  display:block !important;
+}
+
+@keyframes fadeIn {
+  from{
+    opacity:0;
+  }
+  to{
+    opacity:1;
+  }
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.modal-content .first {
+  margin-bottom: 15px;
+}
+
+.modal-content label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.modal-content select, .modal-content input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#applyFilters {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 4px;
+}
+
+#applyFilters:hover {
+  background-color: #45a049;
+}
+
+/* Products Section */
+section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+section ul {
+  list-style: none;
+  padding: 0;
+}
+
+section ul li {
+  background-color: #f9f9f9;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+section ul li:hover {
+  background-color: #f1f1f1;
+  border-color: #4CAF50;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .search-filter {
+      flex-direction: column;
+      width: 100%;
+  }
+
+  #searchBox {
+      width: 100%;
+      margin-bottom: 10px;
+  }
+
+  .modal-content {
+      width: 90%;
+  }
+}
